@@ -1,0 +1,114 @@
+@use "./variable" as *;
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.selectors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    label {
+        margin-right: 8px;
+        font-weight: 600;
+    }
+
+    select {
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+}
+
+.dayCard,
+.catFactContainer {
+    background: #fff;
+}
+
+.active--card {
+    background: #ddd;
+}
+
+.button--theme {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #eee;
+    color: #333;
+    font-weight: 600;
+}
+
+.dark-theme {
+    background-color: $dark-bg;
+    color: $dark-color;
+
+    .dayCard {
+        background: $dark-dayCard-bg;
+        border-color: $dark-dayCard-border;
+    }
+
+    .active--card {
+        background: #272727;
+    }
+
+    .button--theme {
+        background: #272727;
+        color: $dark-color;
+    }
+
+    .catFactContainer {
+        background: #272727;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #fff;
+}

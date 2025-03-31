@@ -1,0 +1,6 @@
+.forecastWrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    overflow: auto;
+    gap: 5px;
+}

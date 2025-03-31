@@ -1,0 +1,60 @@
+.active {
+    background-color: rgb(184, 184, 184);
+}
+
+.dayCard {
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-bottom: 2px solid #f00000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &__dayHeader {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 0.5rem;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        .dayName {
+            font-weight: 600;
+        }
+
+        .dateNum {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    }
+
+    &__iconsRow {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 0.5rem;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+    }
+
+    &__iconItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.9rem;
+
+        span {
+            font-size: 1.2rem;
+        }
+    }
+}
